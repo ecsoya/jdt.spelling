@@ -75,5 +75,17 @@
             class="jdt.spelling.Startup">
       </startup>
    </extension>
+   <extension
+         point="org.eclipse.ui.views">
+      <view
+            allowMultiple="false"
+            category="org.eclipse.jdt.ui.java"
+            class="jdt.spelling.views.SpellingViewPart"
+            icon="icons/marker.gif"
+            id="jdt.spelling.view"
+            name="Spelling"
+            restorable="false">
+      </view>
+   </extension>
 
 </plugin>

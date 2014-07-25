@@ -45,7 +45,8 @@ public class Processor {
 
 			@Override
 			public void run() {
-				prepare(resource);
+				//DO not clear markers after editor closed.
+				//prepare(resource);
 			}
 		});
 		job.schedule();

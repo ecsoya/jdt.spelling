@@ -153,8 +153,12 @@ public class Engine extends EditorTracker implements IElementChangedListener, IP
 	}
 
 	private void setCurrentResource(IEditorPart editor) {
-		currentResource = getResource(editor);
-		checkResource(currentResource);
+		//Minimum checking for same file.
+		IResource newResource = getResource(editor);
+		if (currentResource != null && currentResource.equals(newResource)){
+			return;
+		}
+		checkResource(currentResource = newResource);
 	}
 
 	private void clearEditor(IEditorPart editor) {
